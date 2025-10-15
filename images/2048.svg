@@ -1,0 +1,35 @@
+<svg width="150" height="150" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="game2048Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="200" height="200" rx="30" fill="url(#game2048Gradient)" filter="url(#shadow)"/>
+  
+  <!-- 2048游戏块 -->
+  <g transform="translate(60, 60)">
+    <!-- 背景网格 -->
+    <rect x="0" y="0" width="80" height="80" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.3"/>
+    <path d="M 20 0 L 20 80 M 40 0 L 40 80 M 60 0 L 60 80 M 0 20 L 80 20 M 0 40 L 80 40 M 0 60 L 80 60" 
+          stroke="white" stroke-width="1" stroke-opacity="0.2"/>
+    
+    <!-- 数字方块 -->
+    <rect x="5" y="5" width="30" height="30" rx="5" fill="#FFD93D"/>
+    <text x="20" y="25" fill="#333" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">2</text>
+    
+    <rect x="45" y="5" width="30" height="30" rx="5" fill="#FF6B6B"/>
+    <text x="60" y="25" fill="white" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">4</text>
+    
+    <rect x="5" y="45" width="30" height="30" rx="5" fill="#4ECDC4"/>
+    <text x="20" y="65" fill="white" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">8</text>
+    
+    <rect x="45" y="45" width="30" height="30" rx="5" fill="#95E1D3"/>
+    <text x="60" y="65" fill="#333" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">16</text>
+  </g>
+  
+  <text x="100" y="170" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold">
+    2048
+  </text>
+</svg>

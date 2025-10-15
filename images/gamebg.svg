@@ -1,0 +1,88 @@
+<svg width="360" height="640" viewBox="0 0 360 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 渐变定义 -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3c72"/>
+      <stop offset="50%" stop-color="#2a5298"/>
+      <stop offset="100%" stop-color="#7db9e8"/>
+    </linearGradient>
+    
+    <linearGradient id="groundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2d5016"/>
+      <stop offset="100%" stop-color="#1a3312"/>
+    </linearGradient>
+    
+    <linearGradient id="towerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b5a2b"/>
+      <stop offset="100%" stop-color="#654321"/>
+    </linearGradient>
+    
+    <!-- 星星闪烁动画 -->
+    <style type="text/css">
+      <![CDATA[
+        @keyframes twinkle {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.8; }
+        }
+        .star { animation: twinkle 2s infinite; }
+        .star:nth-child(2n) { animation-delay: 0.5s; }
+        .star:nth-child(3n) { animation-delay: 1s; }
+        .star:nth-child(4n) { animation-delay: 1.5s; }
+      ]]>
+    </style>
+  </defs>
+
+  <!-- 天空背景 -->
+  <rect width="360" height="640" fill="url(#skyGradient)"/>
+  
+  <!-- 远处山脉 -->
+  <polygon points="0,400 80,380 160,390 240,370 320,385 360,400 360,640 0,640" fill="#1e3c72" opacity="0.6"/>
+  
+  <!-- 星星 -->
+  <g class="stars">
+    <rect class="star" x="40" y="60" width="2" height="2" fill="#ffffff" opacity="0.6"/>
+    <rect class="star" x="120" y="30" width="2" height="2" fill="#ffffff" opacity="0.6"/>
+    <rect class="star" x="200" y="80" width="2" height="2" fill="#ffffff" opacity="0.6"/>
+    <rect class="star" x="280" y="50" width="2" height="2" fill="#ffffff" opacity="0.6"/>
+    <rect class="star" x="320" y="100" width="2" height="2" fill="#ffffff" opacity="0.6"/>
+    <rect class="star" x="80" y="120" width="2" height="2" fill="#ffffff" opacity="0.6"/>
+    <rect class="star" x="160" y="150" width="2" height="2" fill="#ffffff" opacity="0.6"/>
+    <rect class="star" x="240" y="110" width="2" height="2" fill="#ffffff" opacity="0.6"/>
+    <rect class="star" x="300" y="180" width="2" height="2" fill="#ffffff" opacity="0.6"/>
+  </g>
+
+  <!-- 月亮 -->
+  <circle cx="300" cy="80" r="15" fill="#f5f5dc" opacity="0.9"/>
+  <circle cx="295" cy="75" r="12" fill="#1e3c72" opacity="0.8"/>
+  <!-- 前景地面 -->
+  <rect x="0" y="500" width="360" height="140" fill="url(#groundGradient)"/>
+  
+  <!-- 前景装饰 -->
+  <g id="foreground">
+    <!-- 左侧树木 -->
+    <rect x="40" y="460" width="12" height="40" fill="#8b4513"/>
+    <rect x="30" y="430" width="32" height="30" fill="#228b22"/>
+    
+    <!-- 右侧树木 -->
+    <rect x="310" y="470" width="12" height="30" fill="#8b4513"/>
+    <rect x="300" y="445" width="32" height="25" fill="#228b22"/>
+    
+    <!-- 灌木丛 -->
+    <rect x="20" y="490" width="25" height="10" fill="#2e8b57"/>
+    <rect x="320" y="495" width="25" height="10" fill="#2e8b57"/>
+    <rect x="180" y="510" width="20" height="8" fill="#2e8b57"/>
+    
+    <!-- 路径 -->
+    <rect x="170" y="500" width="20" height="30" fill="#deb887" opacity="0.7"/>
+  </g>
+
+  <!-- 标题区域 -->
+  <rect x="80" y="40" width="200" height="60" fill="#8b0000" opacity="0.8" rx="5"/>
+  <rect x="85" y="45" width="190" height="50" fill="#b22222" opacity="0.9" rx="3"/>
+  
+ 
+  <text x="180" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff">
+    PIXEL MAZE TOWER
+  </text>
+
+</svg>
